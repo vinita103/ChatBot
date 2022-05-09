@@ -2,8 +2,11 @@ import java.util.Scanner;
 
 public class ChatBot {
     final static Scanner data = new Scanner (System.in);
+   
+
     public static void main(String[] args)  {
-              
+
+                     
         greeting();
         
         repeatname();
@@ -13,6 +16,9 @@ public class ChatBot {
         count();
 
         test();
+
+        
+        weekPhrase();
     }
 
     public static void greeting() {
@@ -25,8 +31,10 @@ public class ChatBot {
     public static void repeatname() {
         System.out.println("Can you please repeat your name?");
         String name = data.nextLine();
-        
+     
+             
     }
+      
 
     public static void guessAge() {
         System.out.println("Let me guess your age?");
@@ -36,6 +44,7 @@ public class ChatBot {
         int rem5 = data.nextInt();
         System.out.println("Tell me remainder of dividing your age by 7. ");
         int rem7 = data.nextInt();
+        // calculating age of the user based on input- level2 (optional)
         int age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105;
         System.out.println("Your age is " + age ) ;
         
@@ -63,6 +72,39 @@ public class ChatBot {
                 ans = data.nextInt();
             }
                 
+                
+            }
+
+            // Switch statement for phrase - level 3(optional)
+            
+
+            public static void weekPhrase() {
+                System.out.println("Enter a number from 1 to 7");
+                int day = data.nextInt();
+                switch (day) {
+                    case 1:
+                        System.out.println("I'm  bit moody on Mondays!");
+                        break;
+                    case 2:
+                        System.out.println("I'm terrific on Tuesdays!");
+                        break;
+                    case 3:
+                        System.out.println("I'm  grumpy on Wednesdays!");
+                        break;
+                    case 4:
+                        System.out.println("I'm energetic on Thursdays!");
+                        break;
+                    case 5:
+                        System.out.println("I'm at my best on Fridays!");
+                        break;
+                    case 6:
+                        System.out.println("I'm super excited on Saturdays!");
+                        break;
+                    case 7:
+                        System.out.println("I'm  sleepy on Sundays!");
+                        break;
+                                    
+                }
                 
             }
             
